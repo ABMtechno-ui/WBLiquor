@@ -964,13 +964,14 @@
 }
 
 .btn-admin {
-  background: #ffea00;
-  color: #212121;
-  border: 1px solid #ffea00;
+    background: #FFF8E1;
+    color: #212121;
+    border: 2px solid #F1C40F;
 }
 .btn-admin:hover {
-  background: #e6d200;
-  border-color: #e6d200;
+  background: #FFF8E1;
+    color: #212121;
+    border: 2px solid #FFF8E1;
 }
 .modal-backdrop {
   display: none;
