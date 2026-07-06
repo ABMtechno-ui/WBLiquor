@@ -195,3 +195,44 @@
   if(proceedPayment){ /* controlled by backend in production */ }
 
 })();
+
+
+
+/* ---------- Admin Login Modal ---------- */
+(function(){
+  "use strict";
+  const backdrop = document.getElementById("adminModalBackdrop");
+  const openBtn = document.getElementById("adminLoginBtn");
+  const openBtnMobile = document.getElementById("adminLoginBtnMobile");
+  const closeBtn = document.getElementById("adminModalClose");
+  const form = document.getElementById("adminLoginForm");
+
+  if(!backdrop) return;
+
+  function openModal(e){
+    if(e) e.preventDefault();
+    backdrop.classList.add("open");
+    document.body.style.overflow = "hidden";
+    const firstInput = backdrop.querySelector("input");
+    firstInput && firstInput.focus();
+  }
+  function closeModal(){
+    backdrop.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  openBtn && openBtn.addEventListener("click", openModal);
+  openBtnMobile && openBtnMobile.addEventListener("click", openModal);
+  closeBtn && closeBtn.addEventListener("click", closeModal);
+  backdrop.addEventListener("click", function(e){
+    if(e.target === backdrop) closeModal();
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && backdrop.classList.contains("open")) closeModal();
+  });
+
+  form && form.addEventListener("submit", function(e){
+    e.preventDefault();
+    window.location.href = "admin/index.html";
+  });
+})();
