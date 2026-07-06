@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="assets/css/style.css"/>
 <link rel="stylesheet" href="assets/css/components.css"/>
 <link rel="stylesheet" href="assets/css/responsive.css"/>
-
 </head><body>
 <header class="nav"><div class="container nav-inner">
 <a href="index.html" class="brand"><span class="brand-mark">W</span> WBFL Association</a>
@@ -23,19 +22,29 @@
 <a href="index.html">Home</a><a href="about.html">About</a><a href="benefits.html">Benefits</a><a href="fee.html">Membership</a><a href="contact.html">Contact</a><a href="login.html">Login</a>
 </div></header>
 
-<div class="auth-wrap">
-  <div class="auth-card">
-    <h2>Create your account</h2>
-    <p class="sub">Start your membership application in minutes.</p>
-    <form class="form" id="registerForm" novalidate>
-      <div class="field"><label for="regName">Full name</label><input class="input" id="regName" name="name" autocomplete="name" placeholder="Your full name" required/></div>
-      <div class="field"><label for="regEmail">Email address</label><input class="input" id="regEmail" type="email" name="email" autocomplete="email" placeholder="you@company.com" required/></div>
-      <div class="field"><label for="regPassword">Password</label><input class="input" id="regPassword" type="password" name="password" autocomplete="new-password" minlength="8" placeholder="Minimum 8 characters" required/></div>
-      <div class="field"><label for="regConfirm">Confirm password</label><input class="input" id="regConfirm" type="password" name="confirm" autocomplete="new-password" minlength="8" placeholder="Re-enter password" required/></div>
-      <label class="checkbox"><input type="checkbox" required/> I agree to the <a href="about.html">association terms and rules</a>.</label>
-      <button class="btn btn-primary btn-block" type="submit">Create account</button>
-    </form>
-    <p class="auth-alt">Already have an account? <a href="login.html">Sign in</a></p>
+<div class="auth-split">
+  <div class="auth-split-left">
+    <div class="auth-card">
+      <h2>Sign Up</h2>
+      <p class="kicker">Create <b>account</b></p>
+      <form class="form" id="registerForm" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="regFirstName">First name</label><input class="input" id="regFirstName" name="firstName" autocomplete="given-name" placeholder="First name" required/></div>
+          <div class="field"><label for="regLastName">Last name</label><input class="input" id="regLastName" name="lastName" autocomplete="family-name" placeholder="Last name" required/></div>
+        </div>
+        <div class="field"><label for="regEmail">Email</label><input class="input" id="regEmail" type="email" name="email" autocomplete="email" placeholder="you@company.com" required/></div>
+        <div class="field"><label for="regPassword">Password</label><input class="input" id="regPassword" type="password" name="password" autocomplete="new-password" minlength="8" placeholder="Minimum 8 characters" required/></div>
+        <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      </form>
+      <div class="social-row">
+        <button class="btn-social" type="button"><i class="bi bi-google" aria-hidden="true"></i> Sign up with Google</button>
+        <button class="btn-social" type="button"><i class="bi bi-apple" aria-hidden="true"></i> Sign up with Apple</button>
+      </div>
+      <p class="auth-alt">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+  <div class="auth-split-right">
+    <img src="https://westwardwhiskey.com/cdn/shop/files/NeatKitHexGlasses-lifestyle.png?v=1727212800&width=580" alt="Association welfare illustration"/>
   </div>
 </div>
 <script src="assets/js/app.js"></script>
